@@ -1,21 +1,23 @@
 # CPSY-300_Project01
 
-Branch: Ritesh — Tasks 1 & 3
-Task 1: Dataset Analysis
+Branch: Aaryan — Tasks 2 & 4
+Now, it is time to create the Docker image for the Application.Task 2: Dockerizing the Application.
 
-Analyzed All_Diets.csv (7,806 recipes, 5 diet types)
-Calculated average macronutrients per diet type
-Found Keto has highest average protein
-Created bar chart, heatmap, and scatter plot visualizations
+Created a Dockerfile to containerize the Python 3.9 slim base image on which the data_analysis.py script is based.
+Using Docker build to create the image locally
+Aran, ran and tested the container to ensure the analysis runs as expected within Docker.
+Staged the image to Docker Hub with username “aaryan8888”
+Written a docker-compose.yml to mimic cloud deploy locally.
 
-Files: data_analysis.py, All_Diets.csv, visualizations/
-Screenshots: All Task 1 screenshots with date/time visible are documented in Visualizations.pdf including bar chart, heatmap, scatter plot, and terminal output.
+Files: Dockerfile, docker-compose.yml
+Screenshots: All Task 2 screenshots with date/time are included in Screens_3_and_4.pdf which include Docker build, Docker run, Docker Hub login, Docker Hub repository, and Docker Compose deployment.
 
-Task 3: Serverless Function with Azurite
+Create a CI/CD Pipeline using GitHub Actions
 
-Ran Azurite as local Azure Blob Storage emulator
-Built serverless function to read, process and store data
-Results saved to simulated_nosql/results.json
+Created .github/workflows/deploy.yml pipeline
+Pipeline automatically starts on each push to the Aaryan branch
+Python installs, downloads dependencies, executes data analysis as a test and creates Docker image.
+The GitHub Actions pipeline ran successfully with green checkmark.
 
-Files: lambda_function.py, simulated_nosql/results.json
-Screenshots: All Task 3 screenshots with date/time visible are documented in Visualizations.pdf including Azurite running, lambda function execution, and results.json output.
+Files: .github/workflows/deploy.yml
+Screenshots: All Task 4 screenshots are captured and documented in Screens_3_and_4.pdf, such as the capture of GitHub secrets configuration and GitHub Actions green pipeline.
