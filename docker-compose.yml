@@ -1,0 +1,6 @@
+version: '3'
+services:
+  diet-analysis:
+    image: aaryan8888/diet-analysis
+    container_name: diet-analysis-container
+    restart: "no"
